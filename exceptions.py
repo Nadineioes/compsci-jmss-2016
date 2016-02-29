@@ -1,6 +1,10 @@
-my_list = [1,2,3,5]
+notNum=True
+while notNum:
+    try:
+        x = input("Please enter a whole number")
 
-try:
-    x = my_list[5]
-except IndexError:
-    print("Out of Range")
+        x = int(x)
+        notNum = False
+    except ValueError:
+        print("hey! Doofus! I asked for an integar!! Not a ",x)
+print("x is",x)
